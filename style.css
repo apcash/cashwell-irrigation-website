@@ -1,0 +1,405 @@
+/* ================================
+   Brand Color System
+==================================*/
+:root {
+  --primary: #4AA84A;          /* Fresh Turf Green */
+  --secondary-blue: #1C5D99;   /* Pacific Deep Blue */
+  --secondary-brown: #6E5A45;  /* Earthline Brown */
+  --accent-amber: #F4C26A;     /* Warm Glow Amber */
+
+  --neutral-white: #FFFFFF;
+  --neutral-black: #1A1A1A;
+  --neutral-silver: #E7EAED;
+
+  --page-bg: #ECF5EC;  /* soft but clearly tinted light green */
+
+}
+
+/* ================================
+   Global Typography & Body
+==================================*/
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+.container {
+  max-width: 1200px;
+}
+
+
+body {
+  background-color: var(--page-bg);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--neutral-black);
+}
+
+h1, h2, h3, .section-title, .header-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1, h2 {
+  color: var(--neutral-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* ================================
+   Header / Navbar
+==================================*/
+.hdr {
+  background-color: var(--neutral-white);
+  border-bottom: 1px solid var(--neutral-silver);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.header-link {
+  color: var(--secondary-blue);
+}
+
+.header-link:hover {
+  color: var(--primary);
+}
+
+.home {
+  color: var(--neutral-black);
+}
+
+.btn-hdr {
+  color: var(--secondary-blue);
+}
+
+/* “Sign-up” button in header, smaller secondary accent */
+.sign-up {
+  background-color: var(--accent-amber);
+  color: var(--neutral-black);
+  border: 1px solid var(--accent-amber);
+}
+
+.sign-up:hover {
+  background-color: #e0aa55;
+  border-color: #e0aa55;
+  color: var(--neutral-black);
+}
+
+/* ================================
+   Hero / Main CTA
+==================================*/
+
+/* Add class="... hero-bg" to your hero container in index.html */
+.hero-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 168, 74, 0.23),
+    rgba(28, 93, 153, 0.20)
+  );
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+}
+
+/* Buttons inside hero */
+.buttons {
+  color: var(--neutral-white);
+}
+
+/* Primary green button */
+.custom-brown {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--neutral-white);
+}
+
+.custom-brown:hover {
+  background-color: #3b8a3b;
+  border-color: #3b8a3b;
+}
+
+/* Outline blue button */
+.custom-outline {
+  color: var(--secondary-blue);
+  border: 2px solid var(--secondary-blue);
+  background-color: transparent;
+}
+
+.custom-outline:hover {
+  background-color: var(--secondary-blue);
+  color: var(--neutral-white);
+}
+
+/* Solid blue button */
+.custom-solid {
+  background-color: var(--secondary-blue);
+  color: var(--neutral-white);
+  border: 2px solid var(--secondary-blue);
+}
+
+.custom-solid:hover {
+  background-color: #184f82; /* slightly darker shade for hover */
+  border-color: #184f82;
+  color: var(--neutral-white);
+}
+
+/* Ensure hero buttons have centered text */
+.buttons.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* Active states */
+.custom-brown:active,
+.custom-brown:focus:active {
+  background-color: #2f6d30;
+  border-color: #2f6d30;
+}
+
+.custom-outline:active,
+.custom-outline:focus:active {
+  background-color: #16406b;
+  border-color: #16406b;
+  color: var(--neutral-white);
+}
+
+/* ================================
+   Carousel
+==================================*/
+.carousel-img {
+  width: 100%;
+  height: 550px;           /* match whatever height you chose */
+  object-fit: cover;       /* fills the frame, crops edges gracefully */
+  object-position: center; /* keep subject centered */
+  display: block;
+}
+
+
+/* Carousel container with nice padding + rounding */
+.carousel-container {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden; /* ensures images + overlay follow rounded corners */
+  max-height: 550px; /* adjust height to taste */
+}
+
+/* Ensures images fill width but are centered vertically */
+.carousel-item img {
+  object-fit: cover;     /* keeps fill, but crops gracefully */
+  object-position: center center;
+  height: 550px;         /* must match carousel-container max-height */
+  width: 100%;
+  display: block;
+}
+
+/* Dark overlay attached properly & rounded */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.35)
+  );
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+
+
+/* ================================
+   Feature Icons & Section
+==================================*/
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  color: var(--neutral-white);
+}
+
+.icon-square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-irrigation {
+  background-color: var(--secondary-blue);
+}
+
+.bg-lighting {
+  background-color: var(--accent-amber);
+  color: var(--neutral-black);
+}
+
+.bg-reliable {
+  background-color: var(--primary);
+}
+
+/* Light green band behind the feature section & testimonial */
+.section-bg {
+  background-color: #E2F1E4;  /* more visible green tint */
+}
+
+
+/* ================================
+   Testimonial Block
+==================================*/
+.blockquote {
+  background-color: var(--secondary-brown);
+  color: var(--neutral-white);
+}
+
+.bg-custom-brown {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 93, 153, 0.9),
+    rgba(74, 168, 74, 0.9)
+  );
+  color: var(--neutral-white);
+}
+
+.bg-custom-brown .bi {
+  color: rgba(255,255,255,0.7);  /* quote icons */
+}
+
+.bg-custom-brown .blockquote-footer {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+
+/* ================================
+   Cards / Gallery
+==================================*/
+.card {
+  border: 1px solid var(--neutral-silver);
+  background-color: var(--neutral-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.gallery .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery .card:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   Contact Page
+==================================*/
+.feature a {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.feature a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.feature.col {
+  text-align: center;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;  
+  color: var(--neutral-white);
+}
+
+.feature-icon.teal {
+  background-color: #2D8C85;
+}
+
+.contact-form {
+  background-color: var(--neutral-silver);
+  border-radius: 0.75rem;
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  color: var(--neutral-black);
+}
+
+.contact-form .form-control {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--secondary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(28, 93, 153, 0.25);
+}
+
+.hours {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/*.hours:hover {  
+  color: var(--primary);
+}*/
+
+/* ================================
+   Footer and Footer Gradient
+==================================*/
+.footer-transition {
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(236, 245, 236, 0),
+    rgba(28, 93, 153, 0.25)
+  );
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, var(--secondary-blue), var(--primary));
+  color: var(--neutral-white);
+}
+
+.gradient-background a {
+  color: var(--accent-amber);
+}
+
+.gradient-background a:hover {
+  color: #ffe1a0;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-nav .nav-link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-nav .nav-link:hover {
+  color: var(--accent-amber);
+}
+
+.footer-nav .nav-link + .nav-link {
+  margin-left: 0.25rem;
+}
