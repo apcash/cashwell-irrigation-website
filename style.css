@@ -177,30 +177,40 @@ a:hover {
 /* ================================
    Carousel
 ==================================*/
+/* Outer gray block that frames the carousel */
+.carousel-container {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: var(--neutral-silver);
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
+
+/* Make the inner area clip the image with rounded corners */
+.carousel-inner {
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Set a consistent height for every slide */
+.carousel-item {
+  height: 460px; /* tweak: 400, 450, 500 depending what looks best */
+}
+
+/* Make images fill the space nicely */
+.carousel-item img,
 .carousel-img {
   width: 100%;
-  height: 550px;           /* match whatever height you chose */
-  object-fit: cover;       /* fills the frame, crops edges gracefully */
-  object-position: center; /* keep subject centered */
+  height: 100%;
+  object-fit: cover;        /* fill the box, crop excess */
+  object-position: center;  /* keep the subject centered */
   display: block;
 }
 
-
-/* Carousel container with nice padding + rounding */
-.carousel-container {
-  position: relative;
-  border-radius: 0.75rem;
-  overflow: hidden; /* ensures images + overlay follow rounded corners */
-  max-height: 550px; /* adjust height to taste */
-}
-
-/* Ensures images fill width but are centered vertically */
-.carousel-item img {
-  object-fit: cover;     /* keeps fill, but crops gracefully */
-  object-position: center center;
-  height: 550px;         /* must match carousel-container max-height */
-  width: 100%;
-  display: block;
+section.carousel-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Dark overlay attached properly & rounded */
@@ -217,7 +227,10 @@ a:hover {
   border-radius: inherit;
 }
 
-
+.no-pad {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
 /* ================================
    Feature Icons & Section
