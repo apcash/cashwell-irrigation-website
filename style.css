@@ -290,6 +290,48 @@ section.carousel-section {
   background-color: #E2F1E4;  /* more visible green tint */
 }
 
+/* Long thin, premium icon bars */
+.feature-icon-small {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2D8C85;          /* Pure consistent teal */
+  color: #ffffff;
+
+  /* layered soft bump shadows */
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.15),       /* outer drop shadow */
+    0 1px 0 rgba(255,255,255,0.25) inset, /* top inner highlight */
+    0 -2px 4px rgba(0,0,0,0.20) inset;    /* bottom inner shadow */
+
+  /* no motion needed */
+  transition: box-shadow 0.15s ease;
+}
+
+.feature-icon-small svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Optional: Slight hover depth WITHOUT movement */
+.feature-icon-small:hover {
+  box-shadow:
+    0 3px 6px rgba(0,0,0,0.22),
+    0 1px 0 rgba(255,255,255,0.25) inset,
+    0 -1px 2px rgba(0,0,0,0.18) inset;
+}
+
+/* Optional: if you still want a pure teal variant elsewhere */
+.feature-icon-small.teal {
+  background: linear-gradient(140deg, #2D8C85, #1D726C);
+
+/* Teal background for small feature icons */
+  background-color: #2D8C85;  /* your premium teal */
+  color: #ffffff;
+}
 
 /* ================================
    Testimonial Block
@@ -368,6 +410,9 @@ section.carousel-section {
   background-color: #2D8C85;
 }
 
+
+
+
 .contact-form {
   background-color: var(--neutral-silver);
   border-radius: 0.75rem;
@@ -397,6 +442,12 @@ section.carousel-section {
 /*.hours:hover {  
   color: var(--primary);
 }*/
+
+.service-title {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
 
 /* ================================
    Footer and Footer Gradient
