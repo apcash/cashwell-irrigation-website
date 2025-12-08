@@ -118,6 +118,14 @@ a:hover {
   color: var(--neutral-black);
 }
 
+.nav-link.active {
+  color: #6c757d !important;   /* Bootstrap’s neutral gray */
+  pointer-events: none;        /* disables clicking */
+  cursor: default;             /* makes cursor normal instead of pointer */
+  text-decoration: none;       /* prevents underline on hover */
+}
+
+
 /* ================================
    Hero / Main CTA
 ==================================*/
@@ -309,6 +317,11 @@ section.carousel-section {
 
   /* no motion needed */
   transition: box-shadow 0.15s ease;
+}
+
+.feature-icon-small i {
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
 .feature-icon-small svg {
