@@ -206,6 +206,14 @@ a:hover {
   color: var(--neutral-white);
 }
 
+.feature-overview h5 {
+    border-left: 4px solid var(--secondary-blue);
+    padding-left: 8px;
+}
+
+
+
+
 /* ================================
    Carousel
 ==================================*/
