@@ -469,6 +469,111 @@ section.carousel-section {
   letter-spacing: 0.2px;
 }
 
+/* ================================
+   About Page
+==================================*/
+
+.about-hero {
+  background: radial-gradient(circle at top left, rgba(28, 93, 153, 0.08), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(44, 163, 80, 0.06), transparent 55%);
+}
+
+.about-badge {
+  background: rgba(0, 0, 0, 0.06);
+  color: #343a40;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+.about-highlight {
+  color: var(--secondary-blue);
+  font-weight: 600;
+}
+
+.about-hero-text {
+  max-width: 40rem;
+}
+
+.about-hero-card {
+  border-radius: 1.5rem;
+  padding: 1px; /* border illusion */
+  background: linear-gradient(135deg, rgba(28, 93, 153, 0.4), rgba(236, 167, 44, 0.4));
+}
+
+.about-hero-card-inner {
+  background: #ffffff;
+  border-radius: 1.4rem;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* About hero photo */
+.about-hero-card img {
+  width: 100%;
+  max-height: 260px;      /* tweak this number if you want it taller/shorter */
+  object-fit: cover;      /* crop to fill instead of squishing */
+  object-position: center;
+  display: block;
+  border-radius: 1.4rem 1.4rem 0 0; /* match top of card, flat on bottom */
+  margin-bottom: 0;
+}
+
+
+.about-stat {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-stat-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6c757d;
+}
+
+.about-stat-value {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.about-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-checklist li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.about-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Small tweaks for mobile */
+@media (max-width: 767.98px) {
+  .about-hero {
+    text-align: left;
+  }
+  
+  .about-hero-card {
+    margin-top: 0.5rem;
+  }
+}
+
 
 /* ================================
    Footer and Footer Gradient
@@ -498,6 +603,8 @@ section.carousel-section {
 .footer-copy {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.75);
+  opacity: 0.85;
+  letter-spacing: 0.2px;
 }
 
 .footer-nav .nav-link {
@@ -512,8 +619,6 @@ section.carousel-section {
 .footer-nav .nav-link + .nav-link {
   margin-left: 0.25rem;
 }
-
-/*Temp Footer CSS*/
 
 #footer {
     color: var(--neutral-white);
@@ -535,11 +640,6 @@ section.carousel-section {
 
 .footer-contact a:hover {
     text-decoration: underline;
-}
-
-.footer-copy {
-    opacity: 0.85;
-    letter-spacing: 0.2px;
 }
 
 .footer-nav {
