@@ -563,11 +563,12 @@ section.carousel-section {
   border-radius: 1.5rem;
   padding: 1px; /* border illusion */
   background: linear-gradient(135deg, rgba(28, 93, 153, 0.4), rgba(236, 167, 44, 0.4));
+  overflow: hidden;
 }
 
 .about-hero-card-inner {
   background: #ffffff;
-  border-radius: 1.4rem;
+  border-radius: 0 0 1.4rem 1.4rem;
   padding: 1.75rem 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
@@ -581,6 +582,7 @@ section.carousel-section {
   display: block;
   border-radius: 1.4rem 1.4rem 0 0; /* match top of card, flat on bottom */
   margin-bottom: 0;
+  background-color: transparent;
 }
 
 
