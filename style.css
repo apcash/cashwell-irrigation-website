@@ -513,3 +513,35 @@ section.carousel-section {
   margin-left: 0.25rem;
 }
 
+/*Temp Footer CSS*/
+
+#footer {
+    color: var(--neutral-white);
+}
+
+.footer-logo {
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+.footer-tagline {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.footer-contact a {
+    color: var(--neutral-white);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    opacity: 0.85;
+    letter-spacing: 0.2px;
+}
+
+.footer-nav {
+    display: none; /* remove old nav bar in footer */
+}
