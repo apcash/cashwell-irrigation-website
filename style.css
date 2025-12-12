@@ -533,6 +533,16 @@ section.carousel-section {
   letter-spacing: 0.2px;
 }
 
+/* Service Area */
+
+.service-area-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-top: 1rem;
+}
+
+
 /* ================================
    About Page
 ==================================*/
