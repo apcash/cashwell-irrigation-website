@@ -68,13 +68,13 @@
                     <p>
                         <a href="./contact.html" class="btn btn-success my-2 custom-brown">Get a Quote</a>
                     </p>
-
                 </div> 
             </div> 
+
         </section> 
-        <div class="album py-5 section-bg"> 
+        <div class="album py-5 section-bg gallery"> 
             <div class="container"> 
-                <div class="gallery row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
                     <div class="col"> 
                         <div class="card shadow-md"> 
                             <img src="../images/Aaron in hole.jpeg" class="card-img-top" alt="Aaron in hole"> 
@@ -252,7 +252,83 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
-  
+    <!-- Gallery Lightbox Overlay -->
+    <div id="lightboxOverlay" class="lightbox-overlay d-none">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <img id="lightboxImage" src="" alt="" class="lightbox-image">
+        <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = Array.from(document.querySelectorAll(".gallery .card img"));
+            const overlay = document.getElementById("lightboxOverlay");
+            const overlayImg = document.getElementById("lightboxImage");
+            const btnClose = overlay.querySelector(".lightbox-close");
+            const btnPrev = overlay.querySelector(".lightbox-prev");
+            const btnNext = overlay.querySelector(".lightbox-next");
+
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const img = images[currentIndex];
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt || "";
+                overlay.classList.remove("d-none");
+            }
+
+            function closeLightbox() {
+                overlay.classList.add("d-none");
+                overlayImg.src = "";
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                openLightbox(currentIndex);
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % images.length;
+                openLightbox(currentIndex);
+            }
+
+            // Attach click handlers to gallery images
+            images.forEach((img, index) => {
+                img.style.cursor = "pointer";
+                img.addEventListener("click", () => openLightbox(index));
+            });
+
+            // Buttons
+            btnClose.addEventListener("click", closeLightbox);
+            btnPrev.addEventListener("click", function (e) {
+                e.stopPropagation();
+                showPrev();
+            });
+            btnNext.addEventListener("click", function (e) {
+                e.stopPropagation();
+                showNext();
+            });
+
+            // Click outside image closes
+            overlay.addEventListener("click", function (e) {
+                if (e.target === overlay) {
+                    closeLightbox();
+                }
+            });
+
+            // ESC and arrow key support
+            document.addEventListener("keydown", function (e) {
+                if (overlay.classList.contains("d-none")) return;
+                if (e.key === "Escape") closeLightbox();
+                if (e.key === "ArrowLeft") showPrev();
+                if (e.key === "ArrowRight") showNext();
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
