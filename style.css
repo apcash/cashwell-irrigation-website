@@ -650,6 +650,16 @@ section.carousel-section {
   }
 }
 
+/* ================================
+   Merch Page
+==================================*/
+.merch-asterisk {
+  font-size: 0.6em;      /* smaller than h1 */
+  vertical-align: super; /* raises it slightly */
+  color: #6c757d;        /* muted gray */
+  margin-left: 2px;
+}
+
 
 /* ================================
    Footer and Footer Gradient
