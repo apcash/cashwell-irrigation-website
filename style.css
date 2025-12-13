@@ -682,6 +682,16 @@ section.carousel-section {
   color: var(--accent-amber);
 }
 
+/* Footer social link should be white (overrides .gradient-background a) */
+#footer a.footer-social {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#footer a.footer-social:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+
 .gradient-background a:hover {
   color: #ffe1a0;
 }
@@ -730,4 +740,20 @@ section.carousel-section {
 
 .footer-nav {
     display: none; /* remove old nav bar in footer */
+}
+
+/* Facebook Tag */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-social:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
