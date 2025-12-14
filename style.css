@@ -13,6 +13,17 @@
 
   --page-bg: #ECF5EC;  /* soft but clearly tinted light green */
 
+    /* Premium UI tokens */
+  --radius-lg: 16px;
+  --radius-md: 12px;
+
+  --shadow-soft: 0 10px 26px rgba(0,0,0,.08);
+  --shadow-hover: 0 14px 34px rgba(0,0,0,.12);
+
+  /* Make the background more premium/clean */
+  --page-bg: #F7FBF7;  /* lighter than the current green tint */
+
+
 }
 
 /* ================================
@@ -49,18 +60,19 @@ body {
   flex-direction: column;
 }
 
-body::before {
+/*body::before {
   content: "";
   position: fixed;
   inset: 0;
   margin: auto;
-  width: min(60vw, 380px);   /* scalable size */
+  width: min(45vw, 320px);   /* scalable size /*
   height: auto;
   background: url("./images/Watermark-Logo.png") center/contain no-repeat;
-  opacity: 0.06;             /* faint watermark effect */
+  opacity: 0.03;             /* faint watermark effect /*
   z-index: -1;
   pointer-events: none;
-}
+} */
+
 
 h1, h2, h3, .section-title, .header-title {
   font-family: 'Poppins', sans-serif;
@@ -79,6 +91,18 @@ a {
 a:hover {
   color: var(--primary);
 }
+
+/* Premium hover only for clickable elements */
+.hover-lift {
+  transition: transform .18s ease, box-shadow .18s ease;
+  will-change: transform;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
 
 /* ================================
    Header / Navbar
@@ -137,9 +161,10 @@ a:hover {
     rgba(74, 168, 74, 0.23),
     rgba(28, 93, 153, 0.20)
   );
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   padding: 3rem 2rem;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0,0,0,.04);
 }
 
 /* Buttons inside hero */
@@ -211,6 +236,14 @@ a:hover {
     padding-left: 8px;
 }
 
+.hero-photo {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
 
 
 
@@ -283,9 +316,8 @@ section.carousel-section {
 }
 
 .icon-square:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease-in-out;
+  transform: none;
+  box-shadow: none;
 }
 
 .bg-irrigation {
@@ -384,16 +416,18 @@ section.carousel-section {
    Cards / Gallery
 ==================================*/
 .card {
-  border: 1px solid var(--neutral-silver);
+  border: 1px solid rgba(0,0,0,.06);
   background-color: var(--neutral-white);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
+
 
 .gallery .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery .card:hover {
+.gallery {
   transform: scale(1.03) translateY(-4px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
 }
@@ -679,7 +713,7 @@ section.carousel-section {
 }
 
 .gradient-background a {
-  color: var(--accent-amber);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 /* Footer social link should be white (overrides .gradient-background a) */
@@ -693,7 +727,7 @@ section.carousel-section {
 
 
 .gradient-background a:hover {
-  color: #ffe1a0;
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer-copy {
