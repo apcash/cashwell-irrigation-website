@@ -282,7 +282,7 @@ a:hover {
 }
 
 section.carousel-section {
-  padding-top: 0;
+  padding-top: 2rem;
   padding-bottom: 0;
 }
 
@@ -300,10 +300,10 @@ section.carousel-section {
   border-radius: inherit;
 }
 
-.no-pad {
+/*.no-pad {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-}
+}*/
 
 /* ================================
    Feature Icons & Section
@@ -429,6 +429,16 @@ section.carousel-section {
   height: 100%;
   object-fit: cover;
   border-radius: 0;            /* let the card control the rounding */
+}
+
+.card-img-top {
+  border-radius: 0;
+  display: block;
+}
+
+.gallery .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 
@@ -697,11 +707,53 @@ section.carousel-section {
    Merch Page
 ==================================*/
 .merch-asterisk {
-  font-size: 0.6em;      /* smaller than h1 */
-  vertical-align: super; /* raises it slightly */
-  color: #6c757d;        /* muted gray */
+  font-size: 0.6em;
+  vertical-align: super;
+  color: #6c757d;
   margin-left: 2px;
 }
+
+/* Card wrapper */
+.merch .card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: var(--neutral-white);
+  box-shadow: var(--shadow-soft);
+}
+
+/* IMPORTANT: this is what hides the baked-in image edge lines */
+.merch .card-img-top {
+  display: block;
+  width: 100%;
+  height: 240px;
+
+  /* keep image inside a “mat” so the baked borders disappear */
+  background: #fff;
+  padding: 14px;
+
+  object-fit: contain;
+  object-position: center;
+
+  /* trims a few pixels off each side (optional but works well here) */
+  clip-path: inset(8px);
+
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0; /* let the card control rounding */
+}
+
+/* Clickable cards focus */
+.merch-grid a:focus,
+.merch-grid a:focus-visible {
+  outline: none;
+}
+
+.merch-grid a:focus-visible .card {
+  box-shadow: 0 0 0 4px rgba(22, 163, 144, 0.25), var(--shadow-soft);
+}
+
 
 
 /* ================================
