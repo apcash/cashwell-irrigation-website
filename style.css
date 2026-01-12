@@ -184,6 +184,15 @@ header img {
   margin-left: 0.35rem;
 }
 
+.hdr .dropdown-menu .dropdown-item.active,
+.hdr .dropdown-menu .dropdown-item:active {
+  background: transparent;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+
+
 
 /* ================================
    Hero / Main CTA
