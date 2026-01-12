@@ -36,8 +36,22 @@
                     <li>
                         <a href="./services.html" class="nav-link header-link px-2">Services</a>
                     </li> 
-                    <li>
-                        <a href="./gallery.html" class="nav-link header-link px-2">Gallery</a>
+                    <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle header-link px-2"
+                          href="#"
+                          id="galleryDropdown"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Gallery
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                          <li><a class="dropdown-item" href="./gallery-lighting.html">Lighting</a></li>
+                          <li><a class="dropdown-item" href="./gallery-repair.html">Repair</a></li>
+                        </ul>
                     </li> 
                     <li>
                         <a href="./contact.html" class="nav-link header-link px-2 active" aria-current="page">Contact</a>

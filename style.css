@@ -157,6 +157,33 @@ header img {
   text-decoration: none;       /* prevents underline on hover */
 }
 
+/* ================================
+   Header dropdown (Bootstrap)
+==================================*/
+.hdr .dropdown-menu {
+  border-radius: 12px;
+  border: 1px solid var(--neutral-silver);
+  box-shadow: var(--shadow-soft);
+  padding: 0.4rem;
+}
+
+.hdr .dropdown-item {
+  border-radius: 10px;
+  color: var(--secondary-blue);
+  font-weight: 500;
+  padding: 0.55rem 0.75rem;
+}
+
+.hdr .dropdown-item:hover,
+.hdr .dropdown-item:focus {
+  background-color: rgba(74, 168, 74, 0.10); /* subtle green tint */
+  color: var(--primary);
+}
+
+.hdr .dropdown-toggle::after {
+  margin-left: 0.35rem;
+}
+
 
 /* ================================
    Hero / Main CTA
