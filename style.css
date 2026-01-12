@@ -558,6 +558,10 @@ section.carousel-section {
   background: rgba(0, 0, 0, 0.8);
 }
 
+section.gallery-page {
+  padding-bottom: 0;
+}
+
 
 /* ================================
    Contact Page
