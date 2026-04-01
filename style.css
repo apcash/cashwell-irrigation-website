@@ -770,6 +770,15 @@ section.gallery-page {
 }
 
 /* ================================
+   Privacy Page
+==================================*/
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================================
    Merch Page
 ==================================*/
 .merch-asterisk {
