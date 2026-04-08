@@ -60,18 +60,6 @@ body {
   flex-direction: column;
 }
 
-/*body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  width: min(45vw, 320px);   /* scalable size /*
-  height: auto;
-  background: url("./images/Watermark-Logo.png") center/contain no-repeat;
-  opacity: 0.03;             /* faint watermark effect /*
-  z-index: -1;
-  pointer-events: none;
-} */
 
 
 h1, h2, h3, .section-title, .header-title {
@@ -926,4 +914,32 @@ section.gallery-page {
 .footer-social:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+/* ================================
+   Legal Pages (Privacy & Terms)
+==================================*/
+
+/* ===== Legal Pages ===== */
+
+.legal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  padding: 2rem;
+}
+
+.legal-card h2 {
+  font-size: 1.4rem;
+}
+
+.legal-intro {
+  font-size: 1.05rem;
+  max-width: 850px;
+}
+
+@media (max-width: 768px) {
+  .legal-card {
+    padding: 1.25rem;
+  }
 }
