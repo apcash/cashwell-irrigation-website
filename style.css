@@ -625,6 +625,16 @@ section.gallery-page {
   box-shadow: 0 0 0 0.2rem rgba(28, 93, 153, 0.25);
 }
 
+.contact-form .form-select {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.contact-form .form-select:focus {
+  border-color: var(--secondary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(28, 93, 153, 0.25);
+}
+
 .hours {
   color: var(--secondary-blue);
   text-decoration: none;

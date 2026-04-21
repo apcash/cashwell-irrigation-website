@@ -168,33 +168,147 @@
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </p>
 
-                <!-- Name -->
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name"
-                        placeholder="Enter your name" required>
-                </div>
+                <!-- Helper text -->
+                    <p class="mb-4 text-center">
+                    Please provide a few details so we can better understand your issue before contacting you.
+                    </p>
 
-                <!-- Email -->
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" name="email"
-                        placeholder="name@example.com" required>
-                </div>
+                    <div class="row">
+                    <!-- Full Name -->
+                    <div class="mb-3 col-md-6">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="full_name"
+                        placeholder="Your first and last name" required>
+                    </div>
 
-                <!-- Phone -->
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone"
+                    <!-- Phone -->
+                    <div class="mb-3 col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone"
                         placeholder="123-456-7890" required>
-                </div>
+                    </div>
+                    </div>
 
-                <!-- Message -->
-                <div class="mb-4">
-                    <label for="message" class="form-label">Message</label>
+                    <div class="row">
+                    <!-- Email -->
+                    <div class="mb-3 col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                        placeholder="name@example.com">
+                    </div>
+
+                    <!-- City / ZIP -->
+                    <div class="mb-3 col-md-6">
+                        <label for="location" class="form-label">City or ZIP Code</label>
+                        <input type="text" class="form-control" id="location" name="location"
+                        placeholder="Raleigh or 27614" required>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <!-- Service Type -->
+                    <div class="mb-3 col-md-6">
+                        <label for="serviceType" class="form-label">Service Type</label>
+                        <select class="form-select" id="serviceType" name="service_type" required>
+                        <option value="">Select a service</option>
+                        <option value="Irrigation">Irrigation</option>
+                        <option value="Landscape Lighting">Landscape Lighting</option>
+                        <option value="Pond Fountain">Pond Fountain</option>
+                        <option value="Not Sure / Other">Not Sure / Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Urgency -->
+                    <div class="mb-3 col-md-6">
+                        <label for="urgency" class="form-label">Urgency</label>
+                        <select class="form-select" id="urgency" name="urgency" required>
+                        <option value="">Select urgency</option>
+                        <option value="Not Urgent">Not urgent</option>
+                        <option value="Somewhat Urgent">Somewhat urgent</option>
+                        <option value="Urgent">Urgent</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <!-- Irrigation Issue -->
+                    <div class="mb-3 d-none" id="irrigationFields">
+                        <label for="irrigationIssue" class="form-label">Irrigation Service Needed</label>
+                        <select class="form-select" id="irrigationIssue" name="irrigation_issue">
+                            <option value="">Select an issue or service</option>
+                            <option value="Spring Start Up">Spring Start Up</option>
+                            <option value="Winterization">Winterization</option>
+                            <option value="System Inspection">System Inspection</option>
+                            <option value="Repair">Repair</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Maintenance Contract">Maintenance Contract</option>
+                            <option value="Addition / Expansion">Addition / Expansion</option>
+                            <option value="Troubleshooting / Problem Solving">Troubleshooting / Problem Solving</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                    </div>
+
+                    <!-- Lighting Issue -->
+                    <div class="mb-3 d-none" id="lightingFields">
+                        <label for="lightingIssue" class="form-label">Lighting Service Needed</label>
+                        <select class="form-select" id="lightingIssue" name="lighting_issue">
+                            <option value="">Select an issue or service</option>
+                            <option value="New Design">New Design</option>
+                            <option value="Installation">Installation</option>
+                            <option value="Repair">Repair</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3 d-none" id="pondFields">
+                        <label for="pondIssue" class="form-label">Pond Fountain Service Needed</label>
+                        <select class="form-select" id="pondIssue" name="pond_issue">
+                            <option value="">Select an issue or service</option>
+                            <option value="Installation">Installation</option>
+                            <option value="Repair">Repair</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                    <!-- Preferred Contact Method -->
+                    <div class="mb-3 col-md-6">
+                        <label for="contactMethod" class="form-label">Preferred Contact Method</label>
+                        <select class="form-select" id="contactMethod" name="preferred_contact_method">
+                        <option value="">Select preference</option>
+                        <option value="Call">Call</option>
+                        <option value="Text">Text</option>
+                        <option value="Email">Email</option>
+                        </select>
+                    </div>
+
+                    <!-- Preferred Contact Time -->
+                    <div class="mb-3 col-md-6">
+                        <label for="contactTime" class="form-label">Preferred Contact Time</label>
+                        <select class="form-select" id="contactTime" name="preferred_contact_time">
+                        <option value="">Select a time</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Anytime">Anytime</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject"
+                        placeholder="Brief summary of the issue" required>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-4">
+                    <label for="message" class="form-label">Describe the Issue</label>
                     <textarea class="form-control" id="message" name="message"
-                            rows="5" placeholder="How can we help you?" required></textarea>
-                </div>
+                        rows="5" placeholder="Please share any helpful details" required></textarea>
+                    </div>
 
                 <!-- Submit -->
                 <div class="text-center">
@@ -203,6 +317,9 @@
                     </button>
                 </div>
             </form>
+
+
+            <!-- Service Area Map-->
 
             <h3 class="mt-4">Service Area</h3>
             <p>
@@ -276,6 +393,29 @@
             </footer>
         </div>
     </section>
+
+    <script>
+        const serviceType = document.getElementById("serviceType");
+        const irrigationFields = document.getElementById("irrigationFields");
+        const lightingFields = document.getElementById("lightingFields");
+        const pondFields = document.getElementById("pondFields");
+
+        serviceType.addEventListener("change", function () {
+            const selected = this.value;
+
+            irrigationFields.classList.add("d-none");
+            lightingFields.classList.add("d-none");
+            pondFields.classList.add("d-none");
+
+            if (selected === "Irrigation") {
+            irrigationFields.classList.remove("d-none");
+            } else if (selected === "Landscape Lighting") {
+            lightingFields.classList.remove("d-none");
+            } else if (selected === "Pond Fountain") {
+            pondFields.classList.remove("d-none");
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
