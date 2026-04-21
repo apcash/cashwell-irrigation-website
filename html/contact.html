@@ -151,7 +151,7 @@
             Reply STOP to opt out and HELP for help.</p>
 
         <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
 
             <form
                 id="contact-form"
@@ -169,8 +169,8 @@
                 </p>
 
                 <!-- Helper text -->
-                    <p class="mb-4 text-center">
-                    Please provide a few details so we can better understand your issue before contacting you.
+                    <p class="mb-3 text-center small">
+                        Please provide a few details so we can better understand your issue before contacting you.
                     </p>
 
                     <div class="row">
@@ -207,38 +207,38 @@
 
                     <div class="row">
                     <!-- Service Type -->
-                    <div class="mb-3 col-md-6">
-                        <label for="serviceType" class="form-label">Service Type</label>
-                        <select class="form-select" id="serviceType" name="service_type" required>
-                        <option value="">Select a service</option>
-                        <option value="Irrigation">Irrigation</option>
-                        <option value="Landscape Lighting">Landscape Lighting</option>
-                        <option value="Pond Fountain">Pond Fountain</option>
-                        <option value="Not Sure / Other">Not Sure / Other</option>
-                        </select>
-                    </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="serviceType" class="form-label">Service Type</label>
+                            <select class="form-select" id="serviceType" name="service_type" required>
+                            <option value="">Select a service</option>
+                            <option value="Irrigation">Irrigation</option>
+                            <option value="Landscape Lighting">Landscape Lighting</option>
+                            <option value="Pond Fountain">Pond Fountain</option>
+                            <option value="Not Sure / Other">Not Sure / Other</option>
+                            </select>
+                        </div>
 
                     <!-- Active Issue (Water Running) -->
-                    <div class="mb-3 col-md-6">
-                        <label for="activeIssue" class="form-label">Is water currently running or leaking?</label>
-                        <select class="form-select" id="activeIssue" name="active_issue">
-                            <option value="">Select</option>
-                            <option value="Yes - Active leak">Yes - Active leak</option>
-                            <option value="No - System not working">No - System not working</option>
-                            <option value="Not sure">Not sure</option>
-                        </select>
-                    </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="activeIssue" class="form-label fw-semibold">Active water leak?</label>
+                            <select class="form-select" id="activeIssue" name="active_issue">
+                                <option value="">Select</option>
+                                <option value="Yes - Active leak">Yes - Active leak</option>
+                                <option value="No - System not working">No - System not working</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
 
                     <!-- Urgency -->
-                    <div class="mb-3 col-md-6">
-                        <label for="urgency" class="form-label">Urgency</label>
-                        <select class="form-select" id="urgency" name="urgency" required>
-                        <option value="">Select urgency</option>
-                        <option value="Not Urgent">Not urgent</option>
-                        <option value="Somewhat Urgent">Somewhat urgent</option>
-                        <option value="Urgent">Urgent</option>
-                        </select>
-                    </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="urgency" class="form-label">Urgency</label>
+                            <select class="form-select" id="urgency" name="urgency" required>
+                            <option value="">Select urgency</option>
+                            <option value="Not Urgent">Not urgent</option>
+                            <option value="Somewhat Urgent">Somewhat urgent</option>
+                            <option value="Urgent">Urgent</option>
+                            </select>
+                        </div>
                     </div>
 
                     <!-- Irrigation Issue -->
