@@ -146,7 +146,7 @@
     <section class="py-5">
     <div class="container">
         <h2 class="mb-4 text-center">Request a Quote</h2>
-        <p class="mb-4 text-center">*By submitting this form, you agree to receive text messages from Cashwell Irrigation Repair & 
+        <p class="mb-4 text-center small text-muted">*By submitting this form, you agree to receive text messages from Cashwell Irrigation Repair & 
             Lighting Design related to appointments, updates, estimates, and invoices. Message frequency may vary. Message and data rates may apply. 
             Reply STOP to opt out and HELP for help.</p>
 
@@ -218,6 +218,17 @@
                         </select>
                     </div>
 
+                    <!-- Active Issue (Water Running) -->
+                    <div class="mb-3 col-md-6">
+                        <label for="activeIssue" class="form-label">Is water currently running or leaking?</label>
+                        <select class="form-select" id="activeIssue" name="active_issue">
+                            <option value="">Select</option>
+                            <option value="Yes - Active leak">Yes - Active leak</option>
+                            <option value="No - System not working">No - System not working</option>
+                            <option value="Not sure">Not sure</option>
+                        </select>
+                    </div>
+
                     <!-- Urgency -->
                     <div class="mb-3 col-md-6">
                         <label for="urgency" class="form-label">Urgency</label>
@@ -256,7 +267,7 @@
                             <option value="Installation">Installation</option>
                             <option value="Repair">Repair</option>
                             <option value="Maintenance">Maintenance</option>
-                            <option value="Pond Fountain">Pond Fountain</option>
+                            <option value="Pond Fountain Lighting">Pond Fountain Lighting</option>
                             <option value="Not Sure">Not Sure</option>
                         </select>
                     </div>
@@ -268,7 +279,6 @@
                             <option value="Installation">Installation</option>
                             <option value="Repair">Repair</option>
                             <option value="Maintenance">Maintenance</option>
-                            <option value="Lighting">Lighting</option>
                             <option value="Not Sure">Not Sure</option>
                         </select>
                     </div>
@@ -402,20 +412,35 @@
         const lightingFields = document.getElementById("lightingFields");
         const pondFields = document.getElementById("pondFields");
 
+        const irrigationSelect = document.getElementById("irrigationIssue");
+        const lightingSelect = document.getElementById("lightingIssue");
+        const pondSelect = document.getElementById("pondIssue");
+
         serviceType.addEventListener("change", function () {
-            const selected = this.value;
+        const selected = this.value;
 
-            irrigationFields.classList.add("d-none");
-            lightingFields.classList.add("d-none");
-            pondFields.classList.add("d-none");
+        // Hide all
+        irrigationFields.classList.add("d-none");
+        lightingFields.classList.add("d-none");
+        pondFields.classList.add("d-none");
 
-            if (selected === "Irrigation") {
+        // Remove required from all
+        irrigationSelect.required = false;
+        lightingSelect.required = false;
+        pondSelect.required = false;
+
+        if (selected === "Irrigation") {
             irrigationFields.classList.remove("d-none");
-            } else if (selected === "Landscape Lighting") {
+            irrigationSelect.required = true;
+        } 
+        else if (selected === "Landscape Lighting") {
             lightingFields.classList.remove("d-none");
-            } else if (selected === "Pond Fountain") {
+            lightingSelect.required = true;
+        } 
+        else if (selected === "Pond Fountain") {
             pondFields.classList.remove("d-none");
-            }
+            pondSelect.required = true;
+        }
         });
     </script>
 
