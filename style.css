@@ -360,6 +360,10 @@ section.carousel-section {
   color: var(--neutral-black);
 }
 
+.bg-fountain {
+  background-color: #2D8C85;
+}
+
 .bg-reliable {
   background-color: var(--primary);
 }
